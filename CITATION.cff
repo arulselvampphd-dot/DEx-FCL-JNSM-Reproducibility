@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software or its benchmark outputs, please cite the associated DEx-FCL manuscript."
+title: "DEx-FCL: Reproducibility package for adaptive Edge-IoT security management"
+type: software
+authors:
+  - family-names: "P"
+    given-names: "Arul Selvam"
+version: "1.0.0"
+date-released: "2026-08-29"

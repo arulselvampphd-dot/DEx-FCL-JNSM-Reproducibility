@@ -1,0 +1,80 @@
+dataset: ciciot2023
+paths:
+  processed: data/processed/ciciot2023_grouped.npz
+  partitions: partitions
+  results: results
+runtime:
+  device: auto
+federated:
+  clients: 10
+  alpha: 0.3
+baselines: [fedavg, fedprox, scaffold, ewc, dexfcl]
+training:
+  rounds: 30
+  local_epochs: 3
+  batch_size: 512
+  optimizer: adamw
+  lr: 0.0005
+  weight_decay: 0.0001
+  momentum: 0.9
+  hidden1: 128
+  latent_dim: 64
+  dropout: 0.25
+  fedprox_mu: 0.01
+  lambda_ewc: 0.02
+  lambda_proto: 0.10
+  lambda_exp: 0.05
+  gamma: 0.50
+  rho: 1.0
+  drift_eta: 0.50
+  fisher_batches: 8
+  grad_clip: 5.0
+continual_training:
+  rounds_per_task: 8
+  local_epochs: 3
+  batch_size: 512
+  optimizer: adamw
+  lr: 0.0005
+  weight_decay: 0.0001
+  hidden1: 128
+  latent_dim: 64
+  dropout: 0.25
+  lambda_ewc: 0.05
+  lambda_proto: 0.20
+  lambda_exp: 0.10
+  gamma: 0.75
+  rho: 2.0
+  drift_eta: 0.50
+  fisher_batches: 8
+  grad_clip: 5.0
+zeroday_training:
+  rounds: 20
+  local_epochs: 3
+  batch_size: 512
+  optimizer: adamw
+  lr: 0.0005
+  weight_decay: 0.0001
+  hidden1: 128
+  latent_dim: 64
+  dropout: 0.25
+  lambda_ewc: 0.00
+  lambda_proto: 0.00
+  lambda_exp: 0.05
+  gamma: 0.50
+  rho: 1.0
+  drift_eta: 0.50
+  fisher_batches: 6
+protocols:
+  noniid_alphas: [1.0, 0.5, 0.3, 0.1]
+  noniid_methods: [fedavg, fedprox, scaffold, dexfcl]
+  continual_methods: [fedavg, ewc, dexfcl]
+  open_beta: 0.50
+  open_quantile: 0.95
+  drift_family: Mirai
+  drift_window: 256
+  explanation_alpha: 0.1
+  explanation_lambda: 0.10
+  fewshot_rounds: 5
+  fewshot_replay_per_client: 2000
+  fewshot_family: WebBased
+  fewshot_counts: [5, 10, 25, 50, 100]

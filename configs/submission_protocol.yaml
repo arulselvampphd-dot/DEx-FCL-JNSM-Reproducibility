@@ -1,0 +1,36 @@
+project: DEx-FCL
+journal_target: Journal of Network and Systems Management
+seeds: [7, 19, 31, 43, 59]
+clients: 5
+primary_dirichlet_alpha: 0.3
+noniid_alphas: [1.0, 0.5, 0.3, 0.1]
+edgeiiot_sampling_seed: 42
+edgeiiot_sampling_fraction: 0.10
+ciciot2023:
+  source: random_3way parquet release
+  train_rows_source: 1073851
+  validation_rows: 134232
+  test_rows: 134231
+  numeric_features: 39
+  training_cap_per_family: 8000
+  families: [Benign, BruteForce, DDoS, DoS, Mirai, Recon, Spoofing, Web-based]
+edgeiiotset:
+  source: official DNN-EdgeIIoT-dataset.csv followed by deterministic 10% Attack_type-stratified sampling
+  subset_rows: 221918
+  numeric_features: 42
+  split_seed: 42
+  split: [0.70, 0.10, 0.20]
+  training_cap_per_family: 10000
+  validation_rows: 22192
+  test_rows: 44384
+  families: [Normal, DoS_DDoS, Information_Gathering, Injection, MITM, Malware]
+methods: [FedAvg, FedProx, SCAFFOLD, FedAvg+EWC, DEx-FCL]
+metrics:
+  closed_set: [accuracy, precision, recall, macro_f1, weighted_f1, mcc, auroc]
+  continual: [final_macro_f1, average_forgetting, backward_transfer]
+  zero_day: [auroc, aupr, unknown_precision, unknown_recall, fpr_at_95_tpr]
+  explanation: [spearman, kendall_tau, jaccard_at_5, jaccard_at_10, jaccard_at_15]
+statistics:
+  overall: Friedman
+  posthoc: Wilcoxon signed-rank with Holm correction
+  alpha: 0.05

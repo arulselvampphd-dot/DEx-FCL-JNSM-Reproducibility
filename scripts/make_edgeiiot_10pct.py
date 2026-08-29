@@ -1,0 +1,59 @@
+"""Create the deterministic 10% Edge-IIoTset subset used by the manuscript.
+
+Input: official DNN-EdgeIIoT-dataset.csv
+Output: DNN-EdgeIIoT-10pct-seed42.csv
+Sampling is exact within each Attack_type using a two-pass streaming algorithm,
+so the source CSV does not need to fit in memory.
+"""
+import argparse
+import csv
+import random
+from collections import Counter
+from pathlib import Path
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("input", type=Path)
+    ap.add_argument("--output", type=Path, default=Path("DNN-EdgeIIoT-10pct-seed42.csv"))
+    ap.add_argument("--fraction", type=float, default=0.10)
+    ap.add_argument("--seed", type=int, default=42)
+    ap.add_argument("--label-col", default="Attack_type")
+    args = ap.parse_args()
+
+    counts = Counter()
+    with args.input.open("r", encoding="utf-8", errors="ignore", newline="") as f:
+        reader = csv.DictReader(f)
+        if args.label_col not in (reader.fieldnames or []):
+            raise ValueError(f"{args.label_col!r} not found. Columns: {reader.fieldnames}")
+        for row in reader:
+            counts[row[args.label_col]] += 1
+
+    targets = {cls: max(1, round(n * args.fraction)) for cls, n in counts.items()}
+    remaining = counts.copy()
+    needed = targets.copy()
+    selected = Counter()
+    rng = random.Random(args.seed)
+
+    with args.input.open("r", encoding="utf-8", errors="ignore", newline="") as fin, \
+         args.output.open("w", encoding="utf-8", newline="") as fout:
+        reader = csv.DictReader(fin)
+        writer = csv.DictWriter(fout, fieldnames=reader.fieldnames)
+        writer.writeheader()
+        for row in reader:
+            cls = row[args.label_col]
+            if needed[cls] > 0:
+                p = needed[cls] / remaining[cls]
+                if rng.random() < p:
+                    writer.writerow(row)
+                    needed[cls] -= 1
+                    selected[cls] += 1
+            remaining[cls] -= 1
+
+    print(f"Saved {sum(selected.values()):,} rows to {args.output}")
+    for cls in sorted(selected):
+        print(f"{cls}: {selected[cls]:,} / {counts[cls]:,}")
+
+
+if __name__ == "__main__":
+    main()
