@@ -5,5 +5,5 @@ type: software
 authors:
   - family-names: "P"
     given-names: "Arul Selvam"
-version: "1.0.0"
-date-released: "2026-08-29"
+version: "1.0.1"
+date-released: "2026-08-30"
