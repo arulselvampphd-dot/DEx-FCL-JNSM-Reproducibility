@@ -1,0 +1,7 @@
+dataset,mode,detection_rate,false_alarm_rate,delay_samples
+ciciot2023,dual,1.0,0.0,0.0
+ciciot2023,entropy,0.0,0.0,
+ciciot2023,latent,1.0,0.0,0.0
+edgeiiotset,dual,1.0,0.0,0.0
+edgeiiotset,entropy,0.0,0.0,
+edgeiiotset,latent,1.0,0.01666666666666666,0.0

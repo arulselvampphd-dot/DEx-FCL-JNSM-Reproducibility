@@ -7,8 +7,6 @@ data/processed/*
 !data/processed/.gitkeep
 partitions/*
 !partitions/.gitkeep
-results/*
-!results/.gitkeep
 figures/*
 !figures/.gitkeep
 tables/*

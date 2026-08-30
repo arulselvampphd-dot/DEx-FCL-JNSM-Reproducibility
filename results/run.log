@@ -1,0 +1,237 @@
+PRIMARY ('ciciot2023', 'fedavg', 7)
+PRIMARY ('ciciot2023', 'fedavg', 19)
+PRIMARY ('ciciot2023', 'fedavg', 31)
+PRIMARY ('ciciot2023', 'fedavg', 43)
+PRIMARY ('ciciot2023', 'fedavg', 59)
+PRIMARY ('ciciot2023', 'fedprox', 7)
+PRIMARY ('ciciot2023', 'fedprox', 19)
+PRIMARY ('ciciot2023', 'fedprox', 31)
+PRIMARY ('ciciot2023', 'fedprox', 43)
+PRIMARY ('ciciot2023', 'fedprox', 59)
+PRIMARY ('ciciot2023', 'scaffold', 7)
+PRIMARY ('ciciot2023', 'scaffold', 19)
+PRIMARY ('ciciot2023', 'scaffold', 31)
+PRIMARY ('ciciot2023', 'scaffold', 43)
+PRIMARY ('ciciot2023', 'scaffold', 59)
+PRIMARY ('ciciot2023', 'fedavg_ewc', 7)
+PRIMARY ('ciciot2023', 'fedavg_ewc', 19)
+PRIMARY ('ciciot2023', 'fedavg_ewc', 31)
+PRIMARY ('ciciot2023', 'fedavg_ewc', 43)
+PRIMARY ('ciciot2023', 'fedavg_ewc', 59)
+PRIMARY ('ciciot2023', 'dexfcl', 7)
+PRIMARY ('ciciot2023', 'dexfcl', 19)
+PRIMARY ('ciciot2023', 'dexfcl', 31)
+PRIMARY ('ciciot2023', 'dexfcl', 43)
+PRIMARY ('ciciot2023', 'dexfcl', 59)
+PRIMARY ('edgeiiotset', 'fedavg', 7)
+PRIMARY ('edgeiiotset', 'fedavg', 19)
+PRIMARY ('edgeiiotset', 'fedavg', 31)
+PRIMARY ('edgeiiotset', 'fedavg', 43)
+PRIMARY ('edgeiiotset', 'fedavg', 59)
+PRIMARY ('edgeiiotset', 'fedprox', 7)
+PRIMARY ('edgeiiotset', 'fedprox', 19)
+PRIMARY ('edgeiiotset', 'fedprox', 31)
+PRIMARY ('edgeiiotset', 'fedprox', 43)
+PRIMARY ('edgeiiotset', 'fedprox', 59)
+PRIMARY ('edgeiiotset', 'scaffold', 7)
+PRIMARY ('edgeiiotset', 'scaffold', 19)
+PRIMARY ('edgeiiotset', 'scaffold', 31)
+PRIMARY ('edgeiiotset', 'scaffold', 43)
+PRIMARY ('edgeiiotset', 'scaffold', 59)
+PRIMARY ('edgeiiotset', 'fedavg_ewc', 7)
+PRIMARY ('edgeiiotset', 'fedavg_ewc', 19)
+PRIMARY ('edgeiiotset', 'fedavg_ewc', 31)
+PRIMARY ('edgeiiotset', 'fedavg_ewc', 43)
+PRIMARY ('edgeiiotset', 'fedavg_ewc', 59)
+PRIMARY ('edgeiiotset', 'dexfcl', 7)
+PRIMARY ('edgeiiotset', 'dexfcl', 19)
+PRIMARY ('edgeiiotset', 'dexfcl', 31)
+PRIMARY ('edgeiiotset', 'dexfcl', 43)
+PRIMARY ('edgeiiotset', 'dexfcl', 59)
+NONIID ciciot2023 1.0 fedavg 7
+NONIID ciciot2023 1.0 fedavg 19
+NONIID ciciot2023 1.0 fedavg 31
+NONIID ciciot2023 1.0 fedavg 43
+NONIID ciciot2023 1.0 fedavg 59
+NONIID ciciot2023 1.0 fedprox 7
+NONIID ciciot2023 1.0 fedprox 19
+NONIID ciciot2023 1.0 fedprox 31
+NONIID ciciot2023 1.0 fedprox 43
+NONIID ciciot2023 1.0 fedprox 59
+NONIID ciciot2023 1.0 scaffold 7
+NONIID ciciot2023 1.0 scaffold 19
+NONIID ciciot2023 1.0 scaffold 31
+NONIID ciciot2023 1.0 scaffold 43
+NONIID ciciot2023 1.0 scaffold 59
+NONIID ciciot2023 1.0 dexfcl 7
+NONIID ciciot2023 1.0 dexfcl 19
+NONIID ciciot2023 1.0 dexfcl 31
+NONIID ciciot2023 1.0 dexfcl 43
+NONIID ciciot2023 1.0 dexfcl 59
+NONIID ciciot2023 0.5 fedavg 7
+NONIID ciciot2023 0.5 fedavg 19
+NONIID ciciot2023 0.5 fedavg 31
+NONIID ciciot2023 0.5 fedavg 43
+NONIID ciciot2023 0.5 fedavg 59
+NONIID ciciot2023 0.5 fedprox 7
+NONIID ciciot2023 0.5 fedprox 19
+NONIID ciciot2023 0.5 fedprox 31
+NONIID ciciot2023 0.5 fedprox 43
+NONIID ciciot2023 0.5 fedprox 59
+NONIID ciciot2023 0.5 scaffold 7
+NONIID ciciot2023 0.5 scaffold 19
+NONIID ciciot2023 0.5 scaffold 31
+NONIID ciciot2023 0.5 scaffold 43
+NONIID ciciot2023 0.5 scaffold 59
+NONIID ciciot2023 0.5 dexfcl 7
+NONIID ciciot2023 0.5 dexfcl 19
+NONIID ciciot2023 0.5 dexfcl 31
+NONIID ciciot2023 0.5 dexfcl 43
+NONIID ciciot2023 0.5 dexfcl 59
+NONIID ciciot2023 0.1 fedavg 7
+NONIID ciciot2023 0.1 fedavg 19
+NONIID ciciot2023 0.1 fedavg 31
+NONIID ciciot2023 0.1 fedavg 43
+NONIID ciciot2023 0.1 fedavg 59
+NONIID ciciot2023 0.1 fedprox 7
+NONIID ciciot2023 0.1 fedprox 19
+NONIID ciciot2023 0.1 fedprox 31
+NONIID ciciot2023 0.1 fedprox 43
+NONIID ciciot2023 0.1 fedprox 59
+NONIID ciciot2023 0.1 scaffold 7
+NONIID ciciot2023 0.1 scaffold 19
+NONIID ciciot2023 0.1 scaffold 31
+NONIID ciciot2023 0.1 scaffold 43
+NONIID ciciot2023 0.1 scaffold 59
+NONIID ciciot2023 0.1 dexfcl 7
+NONIID ciciot2023 0.1 dexfcl 19
+NONIID ciciot2023 0.1 dexfcl 31
+NONIID ciciot2023 0.1 dexfcl 43
+NONIID ciciot2023 0.1 dexfcl 59
+NONIID edgeiiotset 1.0 fedavg 7
+NONIID edgeiiotset 1.0 fedavg 19
+NONIID edgeiiotset 1.0 fedavg 31
+NONIID edgeiiotset 1.0 fedavg 43
+NONIID edgeiiotset 1.0 fedavg 59
+NONIID edgeiiotset 1.0 fedprox 7
+NONIID edgeiiotset 1.0 fedprox 19
+NONIID edgeiiotset 1.0 fedprox 31
+NONIID edgeiiotset 1.0 fedprox 43
+NONIID edgeiiotset 1.0 fedprox 59
+NONIID edgeiiotset 1.0 scaffold 7
+NONIID edgeiiotset 1.0 scaffold 19
+NONIID edgeiiotset 1.0 scaffold 31
+NONIID edgeiiotset 1.0 scaffold 43
+NONIID edgeiiotset 1.0 scaffold 59
+NONIID edgeiiotset 1.0 dexfcl 7
+NONIID edgeiiotset 1.0 dexfcl 19
+NONIID edgeiiotset 1.0 dexfcl 31
+NONIID edgeiiotset 1.0 dexfcl 43
+NONIID edgeiiotset 1.0 dexfcl 59
+NONIID edgeiiotset 0.5 fedavg 7
+NONIID edgeiiotset 0.5 fedavg 19
+NONIID edgeiiotset 0.5 fedavg 31
+NONIID edgeiiotset 0.5 fedavg 43
+NONIID edgeiiotset 0.5 fedavg 59
+NONIID edgeiiotset 0.5 fedprox 7
+NONIID edgeiiotset 0.5 fedprox 19
+NONIID edgeiiotset 0.5 fedprox 31
+NONIID edgeiiotset 0.5 fedprox 43
+NONIID edgeiiotset 0.5 fedprox 59
+NONIID edgeiiotset 0.5 scaffold 7
+NONIID edgeiiotset 0.5 scaffold 19
+NONIID edgeiiotset 0.5 scaffold 31
+NONIID edgeiiotset 0.5 scaffold 43
+NONIID edgeiiotset 0.5 scaffold 59
+NONIID edgeiiotset 0.5 dexfcl 7
+NONIID edgeiiotset 0.5 dexfcl 19
+NONIID edgeiiotset 0.5 dexfcl 31
+NONIID edgeiiotset 0.5 dexfcl 43
+NONIID edgeiiotset 0.5 dexfcl 59
+NONIID edgeiiotset 0.1 fedavg 7
+NONIID edgeiiotset 0.1 fedavg 19
+NONIID edgeiiotset 0.1 fedavg 31
+NONIID edgeiiotset 0.1 fedavg 43
+NONIID edgeiiotset 0.1 fedavg 59
+NONIID edgeiiotset 0.1 fedprox 7
+NONIID edgeiiotset 0.1 fedprox 19
+NONIID edgeiiotset 0.1 fedprox 31
+NONIID edgeiiotset 0.1 fedprox 43
+NONIID edgeiiotset 0.1 fedprox 59
+NONIID edgeiiotset 0.1 scaffold 7
+NONIID edgeiiotset 0.1 scaffold 19
+NONIID edgeiiotset 0.1 scaffold 31
+NONIID edgeiiotset 0.1 scaffold 43
+NONIID edgeiiotset 0.1 scaffold 59
+NONIID edgeiiotset 0.1 dexfcl 7
+NONIID edgeiiotset 0.1 dexfcl 19
+NONIID edgeiiotset 0.1 dexfcl 31
+NONIID edgeiiotset 0.1 dexfcl 43
+NONIID edgeiiotset 0.1 dexfcl 59
+EXPL ciciot2023 fedavg 7
+EXPL ciciot2023 fedavg 19
+EXPL ciciot2023 fedavg 31
+EXPL ciciot2023 fedavg 43
+EXPL ciciot2023 fedavg 59
+EXPL ciciot2023 dexfcl 7
+EXPL ciciot2023 dexfcl 19
+EXPL ciciot2023 dexfcl 31
+EXPL ciciot2023 dexfcl 43
+EXPL ciciot2023 dexfcl 59
+EXPL edgeiiotset fedavg 7
+EXPL edgeiiotset fedavg 19
+EXPL edgeiiotset fedavg 31
+EXPL edgeiiotset fedavg 43
+EXPL edgeiiotset fedavg 59
+EXPL edgeiiotset dexfcl 7
+EXPL edgeiiotset dexfcl 19
+EXPL edgeiiotset dexfcl 31
+EXPL edgeiiotset dexfcl 43
+EXPL edgeiiotset dexfcl 59
+CONT ciciot2023 fedavg 7
+CONT ciciot2023 fedavg 19
+CONT ciciot2023 fedavg 31
+CONT ciciot2023 fedavg 43
+CONT ciciot2023 fedavg 59
+CONT ciciot2023 fedavg_ewc 7
+CONT ciciot2023 fedavg_ewc 19
+CONT ciciot2023 fedavg_ewc 31
+CONT ciciot2023 fedavg_ewc 43
+CONT ciciot2023 fedavg_ewc 59
+CONT ciciot2023 dexfcl 7
+CONT ciciot2023 dexfcl 19
+CONT ciciot2023 dexfcl 31
+CONT ciciot2023 dexfcl 43
+CONT ciciot2023 dexfcl 59
+CONT edgeiiotset fedavg 7
+CONT edgeiiotset fedavg 19
+CONT edgeiiotset fedavg 31
+CONT edgeiiotset fedavg 43
+CONT edgeiiotset fedavg 59
+CONT edgeiiotset fedavg_ewc 7
+CONT edgeiiotset fedavg_ewc 19
+CONT edgeiiotset fedavg_ewc 31
+CONT edgeiiotset fedavg_ewc 43
+CONT edgeiiotset fedavg_ewc 59
+CONT edgeiiotset dexfcl 7
+CONT edgeiiotset dexfcl 19
+CONT edgeiiotset dexfcl 31
+CONT edgeiiotset dexfcl 43
+CONT edgeiiotset dexfcl 59
+ZERO ciciot2023 BruteForce 7
+ZERO ciciot2023 BruteForce 19
+ZERO ciciot2023 BruteForce 31
+ZERO ciciot2023 BruteForce 43
+ZERO ciciot2023 BruteForce 59
+ZERO ciciot2023 DDoS 7
+ZERO ciciot2023 DDoS 19
+ZERO ciciot2023 DDoS 31
+ZERO ciciot2023 DDoS 43
+ZERO ciciot2023 DDoS 59
+ZERO ciciot2023 DoS 7
+ZERO ciciot2023 DoS 19
+ZERO ciciot2023 DoS 31
+ZERO ciciot2023 DoS 43
+ZERO ciciot2023 DoS 59
+ZERO ciciot2023 Mirai 7
+ZERO ciciot2023 Mirai 19
