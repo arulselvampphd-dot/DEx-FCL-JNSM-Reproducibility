@@ -1,0 +1,20 @@
+name: Archived paper outputs
+on:
+  pull_request:
+  push:
+jobs:
+  numerical-reproduction:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements-paper.txt
+      - run: PYTHONPATH=src python -m unittest discover -s tests -v
+      - run: PYTHONPATH=src python -m dexfcl reproduce-paper
+      - run: sha256sum --check SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: archived-paper-outputs
+          path: artifacts/paper/
