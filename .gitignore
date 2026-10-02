@@ -1,4 +1,5 @@
 .venv/
+artifacts/
 __pycache__/
 *.pyc
 data/raw/*
@@ -11,4 +12,3 @@ figures/*
 !figures/.gitkeep
 tables/*
 !tables/.gitkeep
-artifacts/
