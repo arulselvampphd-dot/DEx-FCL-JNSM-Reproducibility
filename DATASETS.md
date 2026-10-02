@@ -1,5 +1,10 @@
 # Dataset acquisition and non-redistribution
 
+> These are historical paper acquisition notes. The legacy preparation launcher
+> does not implement the supplied Parquet splits or integrate the Edge 10% subset.
+> See RELEASE_STATUS.md before attempting a training reproduction. Exact raw
+> dataset distribution hashes have not been recovered.
+
 Raw benchmark data are **not redistributed** in this repository.
 
 ## CICIoT2023

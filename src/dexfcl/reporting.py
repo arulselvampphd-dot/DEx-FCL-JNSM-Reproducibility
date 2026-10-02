@@ -1,5 +1,6 @@
 from __future__ import annotations
 from pathlib import Path
+import re
 import numpy as np, pandas as pd
 import matplotlib.pyplot as plt
 from scipy.stats import friedmanchisquare,wilcoxon,rankdata
@@ -17,11 +18,22 @@ def _rank_biserial_paired(a,b):
     if len(d)==0:return 0.0
     r=rankdata(np.abs(d)); wp=r[d>0].sum(); wm=r[d<0].sum(); return float((wp-wm)/(wp+wm))
 
-def aggregate_results(results_dir, tables_dir):
+def aggregate_results(results_dir, tables_dir, source='auto'):
     r=Path(results_dir); t=Path(tables_dir); t.mkdir(parents=True,exist_ok=True)
+    archived = (r/'primary_runs.csv').exists()
+    campaign = any(r.glob('closed_*_seed*.csv'))
+    if source=='auto' and archived and campaign:
+        raise ValueError('Both archived and campaign CSVs found; choose --source archived or --source campaign')
+    if source=='archived' or (source=='auto' and archived):
+        from .paper_outputs import load_archive, write_tables
+        frames = load_archive(r)
+        write_tables(frames, t)
+        return frames
     outs={}
     for kind in ['closed','noniid','continual','continual_stages','zeroday','drift','drift_series','explanation','fewshot','communication','ablation','sensitivity']:
-        files=list(r.glob(f"{kind}_*.csv"))
+        pattern = (rf'{kind}_(ciciot2023|edgeiiotset)\.csv' if kind in {'communication','ablation','sensitivity'}
+                   else rf'{kind}_(ciciot2023|edgeiiotset)_seed\d+\.csv')
+        files=sorted(p for p in r.glob(f"{kind}_*.csv") if re.fullmatch(pattern,p.name))
         if files:
             df=pd.concat([pd.read_csv(f) for f in files],ignore_index=True); df.to_csv(t/f"all_{kind}.csv",index=False); outs[kind]=df
     if 'closed' in outs:
@@ -69,8 +81,12 @@ def aggregate_results(results_dir, tables_dir):
         outs['sensitivity'].groupby(['dataset','parameter','value','metric'])['score'].agg(['mean','std']).reset_index().to_csv(t/'table_sensitivity.csv',index=False)
     return outs
 
-def make_figures(tables_dir,results_dir,figures_dir):
+def make_figures(tables_dir,results_dir,figures_dir,source='auto'):
     t=Path(tables_dir); r=Path(results_dir); f=Path(figures_dir); f.mkdir(parents=True,exist_ok=True)
+    if source=='archived' or (source=='auto' and (r/'primary_runs.csv').exists()):
+        from .paper_outputs import load_archive, make_paper_figures
+        make_paper_figures(load_archive(r), f)
+        return
     if (t/'all_closed.csv').exists():
         df=pd.read_csv(t/'all_closed.csv')
         for ds,d in df.groupby('dataset'):

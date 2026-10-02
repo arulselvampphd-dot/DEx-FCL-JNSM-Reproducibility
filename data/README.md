@@ -1,5 +1,9 @@
 # Data placement
 
+> This layout belongs to the legacy implementation and differs from the paper's
+> random_3way Parquet protocol. It is not a verified historical training recipe.
+> See ../RELEASE_STATUS.md and ../DATASETS.md for the outstanding preprocessing gaps.
+
 Raw datasets are intentionally **not redistributed** in this package.
 
 ## CICIoT2023

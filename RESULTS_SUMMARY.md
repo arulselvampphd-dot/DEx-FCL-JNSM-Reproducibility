@@ -1,5 +1,9 @@
 # Real benchmark results
 
+> Archived numerical outputs are validated and regenerated with
+> `python -m dexfcl reproduce-paper` (with `PYTHONPATH=src`). Their generating
+> training source/configuration has not been recovered; see RELEASE_STATUS.md.
+
 This directory contains the machine-readable outputs used to generate the manuscript tables and figures. No synthetic result is used in the final benchmark manuscript.
 
 Primary files:
