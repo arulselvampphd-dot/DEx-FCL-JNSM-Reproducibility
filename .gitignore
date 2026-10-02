@@ -11,3 +11,4 @@ figures/*
 !figures/.gitkeep
 tables/*
 !tables/.gitkeep
+artifacts/
